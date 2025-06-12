@@ -44,7 +44,6 @@
   </div>
 
   <script>
-    // Автоматическая активация, если токен сохранён
     window.addEventListener('DOMContentLoaded', () => {
       const savedToken = localStorage.getItem('liraToken');
       if (savedToken === '2517') {
@@ -52,7 +51,6 @@
         logMessage("🔁 Автоматический вход выполнен.");
       }
 
-      // Восстановление данных файла
       const lastName = localStorage.getItem('lastFileName');
       const lastType = localStorage.getItem('lastFileType');
       const lastContent = localStorage.getItem('lastFileContent');
@@ -102,7 +100,6 @@
       link.click();
       URL.revokeObjectURL(link.href);
 
-      // Сохраняем в "память"
       localStorage.setItem('lastFileName', name);
       localStorage.setItem('lastFileType', ext);
       localStorage.setItem('lastFileContent', content);
